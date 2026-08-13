@@ -33,7 +33,12 @@ if (!response.ok) {
 }
 
 const rawHtml = await response.text();
-const html = rawHtml.replace(/https?:\/\/localhost(?::\d+)?/g, siteOrigin);
+const html = rawHtml
+  .replace(/https?:\/\/localhost(?::\d+)?/g, siteOrigin)
+  // The portfolio has no client-side state. Removing the server-runtime scripts
+  // keeps the generated HTML fully static and prevents RSC requests on Pages.
+  .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "")
+  .replace(/<link\b(?=[^>]*\brel=["']modulepreload["'])[^>]*>/gi, "");
 if (!html.includes("Belal Abdalhuk") || !html.includes("Senior Full-Stack Software Engineer")) {
   throw new Error("Static render did not contain the expected portfolio content");
 }
