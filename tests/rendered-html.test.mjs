@@ -35,6 +35,9 @@ test("renders the complete full-stack portfolio", async () => {
   assert.match(html, /Backend depth/);
   assert.match(html, /Belal-Abdalhuk-Resume\.pdf/);
   assert.match(html, /https:\/\/github\.com\/Belal2/);
+  assert.match(html, /mailto:belal\.ash22@gmail\.com/);
+  assert.match(html, /tel:\+201272484205/);
+  assert.match(html, /linkedin\.com\/in\/belal-abdalhuk-1830b0a1/i);
   assert.doesNotMatch(html, /github\.com\/Belal2\/agrichem/i);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
 });
