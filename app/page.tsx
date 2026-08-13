@@ -131,7 +131,7 @@ const experience = [
     focus: "Justice platforms, digital archiving, road-gateway subscriptions and middleware integration.",
   },
   {
-    period: "2017 — 2020",
+    period: "2016 — 2020",
     role: "Software Developer",
     company: "Three Pillars",
     focus: "Insurance, Saudi public-sector, university, healthcare, reporting and mobile products.",
@@ -144,6 +144,28 @@ const stackGroups = [
   { label: "Data & realtime", items: ["Kafka", "WebSocket", "PostgreSQL", "PostGIS", "Oracle", "MongoDB", "Elasticsearch"] },
   { label: "Integration", items: ["Apache Camel", "Red Hat Fuse", "WSO2", "SOAP", "BPM", "Event-driven architecture"] },
   { label: "Platform", items: ["Docker", "Kubernetes", "Keycloak", "AWS / GCS", "Flyway", "Jenkins", "CI/CD"] },
+];
+
+const contactMethods = [
+  {
+    label: "Email",
+    value: "belal.ash22@gmail.com",
+    note: "Opportunities and project briefs",
+    href: "mailto:belal.ash22@gmail.com?subject=Let%27s%20work%20together",
+  },
+  {
+    label: "Phone",
+    value: "+20 127 248 4205",
+    note: "Calls and WhatsApp · Egypt",
+    href: "tel:+201272484205",
+  },
+  {
+    label: "LinkedIn",
+    value: "Connect professionally",
+    note: "Roles, partnerships and network",
+    href: "https://www.linkedin.com/in/belal-abdalhuk-1830b0a1/",
+    external: true,
+  },
 ];
 
 export default function Home() {
@@ -258,7 +280,7 @@ export default function Home() {
       <section className="section services-section" id="services">
         <div className="section-intro services-intro">
           <div><p className="eyebrow">How I can help</p><h2>Senior ownership.<br />Flexible engagement.</h2></div>
-          <p></p>
+          <p>One engineering profile for two conversations: joining a strong product organization, or helping an ambitious team turn a difficult idea into dependable software.</p>
         </div>
         <div className="engagement-grid">
           <article className="engagement-card engagement-primary">
@@ -317,16 +339,30 @@ export default function Home() {
         <div className="contact-glow" aria-hidden="true" />
         <p className="eyebrow eyebrow-light">The next difficult system</p>
         <h2>Let&apos;s make it<br /><em>work beautifully.</em></h2>
-        <div className="contact-bottom">
-          <p>Open to senior full-stack opportunities and selected product engineering partnerships across Egypt, Saudi Arabia and remote teams.</p>
-          <a href="mailto:belal.ash22@gmail.com">belal.ash22@gmail.com <span>↗</span></a>
+        <p className="contact-lead">Open to senior full-stack opportunities and selected product engineering partnerships across Egypt, Saudi Arabia and remote teams.</p>
+        <div className="contact-grid" aria-label="Contact options">
+          {contactMethods.map((method) => (
+            <a
+              className="contact-card"
+              href={method.href}
+              key={method.label}
+              target={method.external ? "_blank" : undefined}
+              rel={method.external ? "noreferrer" : undefined}
+              aria-label={`${method.label}: ${method.value}`}
+            >
+              <small>{method.label}</small>
+              <strong>{method.value}</strong>
+              <span>{method.note}</span>
+              <i aria-hidden="true">↗</i>
+            </a>
+          ))}
         </div>
       </section>
 
       <footer>
         <div className="footer-brand"><span className="brand-mark">BA</span><p><b>Belal Abdalhuk</b><small>Product & Platform Engineering</small></p></div>
         <p>© 2026 · Built with care for systems and the people who use them.</p>
-        <div className="footer-links"><a href="https://github.com/Belal2" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/belal-abdalhuk-1830b0a1/" target="_blank" rel="noreferrer">LinkedIn</a><a href="#top">Top ↑</a></div>
+        <div className="footer-links"><a href="mailto:belal.ash22@gmail.com">Email</a><a href="tel:+201272484205">Phone</a><a href="https://www.linkedin.com/in/belal-abdalhuk-1830b0a1/" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/Belal2" target="_blank" rel="noreferrer">GitHub</a><a href="#top">Top ↑</a></div>
       </footer>
     </main>
   );
