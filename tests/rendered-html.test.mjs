@@ -28,11 +28,13 @@ test("renders the complete full-stack portfolio", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /<title>Belal Abdalhuk — Senior Full-Stack Software Engineer<\/title>/i);
-  assert.match(html, /I build products from/);
-  assert.match(html, /Architecture stories/);
-  assert.match(html, /Technical toolkit/);
+  assert.match(html, /<title>Belal Abdalhuk — Full-Stack Product &amp; Platform Engineer<\/title>/i);
+  assert.match(html, /Complex software/);
+  assert.match(html, /Systems that carry/);
+  assert.match(html, /operating system for agricultural chemical businesses/i);
+  assert.match(html, /Backend depth/);
   assert.match(html, /Belal-Abdalhuk-Resume\.pdf/);
   assert.match(html, /https:\/\/github\.com\/Belal2/);
+  assert.doesNotMatch(html, /github\.com\/Belal2\/agrichem/i);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
 });
