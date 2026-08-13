@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, Manrope } from "next/font/google";
-import { headers } from "next/headers";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -14,31 +13,28 @@ const plexMono = IBM_Plex_Mono({
   weight: ["400", "500", "600"],
 });
 
-export async function generateMetadata(): Promise<Metadata> {
-  const requestHeaders = await headers();
-  const host = requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host") ?? "localhost:3000";
-  const protocol = requestHeaders.get("x-forwarded-proto") ?? (host.startsWith("localhost") ? "http" : "https");
-  const baseUrl = `${protocol}://${host}`;
-  const title = "Belal Abdalhuk — Senior Full-Stack Software Engineer";
-  const description = "Senior Full-Stack Software Engineer delivering end-to-end web and enterprise platforms, real-time systems, integrations, and cloud services.";
+const title = "Belal Abdalhuk — Full-Stack Product & Platform Engineer";
+const description = "Senior Full-Stack Engineer building enterprise products across interfaces, APIs, integrations, real-time data and AI in Egypt, Saudi Arabia and remote teams.";
 
-  return {
+export const metadata: Metadata = {
+  metadataBase: new URL("https://belal2.github.io"),
+  title,
+  description,
+  keywords: ["Full-Stack Engineer", "Java", "Spring Boot", "Angular", "Enterprise Software", "System Integration", "Product Engineering"],
+  openGraph: {
     title,
     description,
-    openGraph: {
-      title,
-      description,
-      type: "website",
-      images: [{ url: `${baseUrl}/og-fullstack.png`, width: 1792, height: 938, alt: title }],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      images: [`${baseUrl}/og-fullstack.png`],
-    },
-  };
-}
+    type: "website",
+    url: "https://belal2.github.io/",
+    images: [{ url: "/og-portfolio-v2.png", width: 1731, height: 909, alt: title }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/og-portfolio-v2.png"],
+  },
+};
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
