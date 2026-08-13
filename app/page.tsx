@@ -331,20 +331,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section public-work-section">
-        <div className="section-intro compact-intro">
-          <div><p className="eyebrow">Public proof</p><h2>Production stays private.<br />The thinking is visible.</h2></div>
-          <p>Most client repositories are access-controlled. Public labs show how I explore security, query design and reusable engineering patterns.</p>
-        </div>
-        <div className="labs-list">
-          {publicLabs.map((repo, index) => (
-            <a key={repo.name} href={repo.href} target="_blank" rel="noreferrer">
-              <span>0{index + 1}</span><div><small>PUBLIC GITHUB REPOSITORY</small><h3>{repo.name}</h3></div><p>{repo.description}</p><i>↗</i>
-            </a>
-          ))}
-        </div>
-        <a className="all-work-link" href="https://github.com/Belal2" target="_blank" rel="noreferrer">Explore GitHub profile <span>↗</span></a>
-      </section>
+     
 
       <section className="contact-section" id="contact">
         <div className="contact-glow" aria-hidden="true" />
