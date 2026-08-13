@@ -2,7 +2,7 @@ const proofPoints = [
   { value: "9+", label: "years shipping production systems" },
   { value: "15+", label: "enterprise platforms and products" },
   { value: "9", label: "industries across regulated and digital sectors" },
-  { value: "EG · KSA", label: "delivery experience across Egypt and Saudi Arabia" },
+  { value: "EG · KSA · BHR · USA", label: "delivery experience across Egypt , Saudi Arabia ,Bahrain and United States of America " },
 ];
 
 const caseStudies = [
@@ -14,7 +14,7 @@ const caseStudies = [
     summary:
       "A unified operations platform for drone telemetry, satellite imagery, live video and AI-assisted detections — designed for the speed and reliability of field work.",
     contribution:
-      "Architected core services and client-facing APIs; built the UDP-to-Kafka telemetry path, real-time WebSocket delivery, spatial services and secure platform boundaries.",
+      "Architected core services and client-facing APIs; built the UDP-to- (Kafka | Websocket) telemetry path, real-time WebSocket delivery, spatial services and secure platform boundaries.",
     outcome: "One dependable operating picture across maps, models, media and alerts.",
     stack: ["Java 21", "Spring Boot 3", "Kafka", "WebSocket", "PostGIS", "Keycloak", "GCS / S3"],
     visual: ["AIR", "INGEST", "EVENTS", "OPS"],
@@ -133,8 +133,8 @@ const experience = [
   {
     period: "2016 — 2020",
     role: "Software Developer",
-    company: "Three Pillars & Suez Canal University",
-    focus: "Insurance, Saudi public-sector, university, healthcare, reporting, mobile and IoT products.",
+    company: "Three Pillars",
+    focus: "Insurance, Saudi public-sector, university, healthcare, reporting and mobile ",
   },
 ];
 
@@ -146,23 +146,6 @@ const stackGroups = [
   { label: "Platform", items: ["Docker", "Kubernetes", "Keycloak", "AWS / GCS", "Flyway", "Jenkins", "CI/CD"] },
 ];
 
-const publicLabs = [
-  {
-    name: "dynamic-query",
-    description: "Flexible, data-driven query patterns in Java.",
-    href: "https://github.com/Belal2/dynamic-query",
-  },
-  {
-    name: "spring-security",
-    description: "Practical explorations of Spring Security concepts.",
-    href: "https://github.com/Belal2/spring-security",
-  },
-  {
-    name: "AlgorithmsAndPatternsSamples",
-    description: "Reference implementations for patterns and algorithms.",
-    href: "https://github.com/Belal2/AlgorithmsAndPatternsSamples",
-  },
-];
 
 export default function Home() {
   return (
