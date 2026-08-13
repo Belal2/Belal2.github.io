@@ -39,7 +39,7 @@ const html = rawHtml
   // keeps the generated HTML fully static and prevents RSC requests on Pages.
   .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "")
   .replace(/<link\b(?=[^>]*\brel=["']modulepreload["'])[^>]*>/gi, "");
-if (!html.includes("Belal Abdalhuk") || !html.includes("Senior Full-Stack Software Engineer")) {
+if (!html.includes("Belal Abdalhuk") || !html.includes("Full-Stack Product &amp; Platform Engineer")) {
   throw new Error("Static render did not contain the expected portfolio content");
 }
 
