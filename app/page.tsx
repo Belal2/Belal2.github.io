@@ -2,7 +2,7 @@ const proofPoints = [
   { value: "9+", label: "years shipping production systems" },
   { value: "15+", label: "enterprise platforms and products" },
   { value: "9", label: "industries across regulated and digital sectors" },
-  { value: "EG · KSA · BHR · USA", label: "delivery experience across Egypt , Saudi Arabia ,Bahrain and United States of America " },
+  { value: "EG · KSA · BHR · USA", label: "delivery experience across Egypt, Saudi Arabia, Bahrain and the United States" },
 ];
 
 const caseStudies = [
@@ -14,7 +14,7 @@ const caseStudies = [
     summary:
       "A unified operations platform for drone telemetry, satellite imagery, live video and AI-assisted detections — designed for the speed and reliability of field work.",
     contribution:
-      "Architected core services and client-facing APIs; built the UDP-to- (Kafka | Websocket) telemetry path, real-time WebSocket delivery, spatial services and secure platform boundaries.",
+      "Architected core services and client-facing APIs; built UDP-to-Kafka and UDP-to-WebSocket telemetry paths, spatial services and secure platform boundaries.",
     outcome: "One dependable operating picture across maps, models, media and alerts.",
     stack: ["Java 21", "Spring Boot 3", "Kafka", "WebSocket", "PostGIS", "Keycloak", "GCS / S3"],
     visual: ["AIR", "INGEST", "EVENTS", "OPS"],
@@ -134,7 +134,7 @@ const experience = [
     period: "2016 — 2020",
     role: "Software Developer",
     company: "Three Pillars",
-    focus: "Insurance, Saudi public-sector, university, healthcare, reporting and mobile ",
+    focus: "Insurance, Saudi public-sector, university, healthcare, reporting and mobile products.",
   },
 ];
 
@@ -145,7 +145,6 @@ const stackGroups = [
   { label: "Integration", items: ["Apache Camel", "Red Hat Fuse", "WSO2", "SOAP", "BPM", "Event-driven architecture"] },
   { label: "Platform", items: ["Docker", "Kubernetes", "Keycloak", "AWS / GCS", "Flyway", "Jenkins", "CI/CD"] },
 ];
-
 
 export default function Home() {
   return (
@@ -313,8 +312,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
-     
 
       <section className="contact-section" id="contact">
         <div className="contact-glow" aria-hidden="true" />
