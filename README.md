@@ -27,7 +27,7 @@ npm run build:pages
 
 `npm run build:pages` creates a static site in `gh-pages-dist/`. The workflow in
 `.github/workflows/deploy-pages.yml` publishes that output to GitHub Pages after
-every push to `main`.
+every push to `main` or `master`.
 
 ## Publishing
 
