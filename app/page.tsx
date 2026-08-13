@@ -131,7 +131,7 @@ const experience = [
     focus: "Justice platforms, digital archiving, road-gateway subscriptions and middleware integration.",
   },
   {
-    period: "2016 — 2020",
+    period: "2017 — 2020",
     role: "Software Developer",
     company: "Three Pillars",
     focus: "Insurance, Saudi public-sector, university, healthcare, reporting and mobile products.",
@@ -258,7 +258,7 @@ export default function Home() {
       <section className="section services-section" id="services">
         <div className="section-intro services-intro">
           <div><p className="eyebrow">How I can help</p><h2>Senior ownership.<br />Flexible engagement.</h2></div>
-          <p>One engineering profile for two conversations: joining a strong product organization, or helping an ambitious team turn a difficult idea into dependable software.</p>
+          <p></p>
         </div>
         <div className="engagement-grid">
           <article className="engagement-card engagement-primary">
